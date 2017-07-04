@@ -12,7 +12,7 @@ When a new periodic snapshot is taken in Glitch, a git hook pushes the latest ch
 
 - Set a secret string for `GITHUB_WEBHOOK_SECRET` in the `.env` file in your Glitch project. 
 
-- Create a webhook on GitHub using the same secret string. From the repo on GitHub, go to `Settings > Webhooks > Add Webhook` and use your Glitch project URL with `/github/callback` appended (your Glitch project URL has the format https://yourproject.glitch.me) as the callback URL. 
+- Create a webhook on GitHub using the same secret string. From the repo on GitHub, go to `Settings > Webhooks > Add Webhook` and use `https://yourproject.glitch.me/github/callback` as the callback URL. 
 
 - Get Glitch to remember your GitHub login details (we've added `.git-credentials` to `.gitignore` so they don't get shared on GitHub). From the console in Glitch, run:
 
