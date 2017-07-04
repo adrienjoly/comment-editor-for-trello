@@ -8,13 +8,13 @@ The result is syncing of changes when they're made on [Glitch](https://glitch.co
 
 ## Setup
 
-- [Remix this GLitch project](https://glitch.com/edit/#!/remix/glitch-github-sync).
+- [Remix this Glitch project](https://glitch.com/edit/#!/remix/glitch-github-sync).
 
 - Create a new repo on GitHub, initializing it with a readme. Then export your Glitch project to that repo.
 
 - Set a secret string for `GITHUB_WEBHOOK_SECRET` in the `.env` file in your Glitch project. 
 
-- Create a webhook on GitHub using the same secret string. From the repo on GitHub, go to `Settings > Webhooks > Add Webhook` and use `https://yourproject.glitch.me/github/callback` as the callback URL. 
+- Create a Webhook on GitHub using the same secret string. From the repo on GitHub, go to `Settings > Webhooks > Add Webhook` and use `https://yourproject.glitch.me/github/callback` as the callback URL. 
 
 - Get Glitch to remember your GitHub login details (we've added `.git-credentials` to `.gitignore` so they don't get shared on GitHub). From the console in Glitch, run:
 
