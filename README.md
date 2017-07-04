@@ -1,6 +1,10 @@
 # Glitch <> GitHub Sync
 
-Using [git hooks](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks) and [githubhook](https://github.com/nlf/node-github-hook).
+Two-way sync of a Glitch project and a GitHub repo, using [git hooks](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks) and [githubhook](https://github.com/nlf/node-github-hook).
+
+When a new snapshot is taken in Glitch, a git hook pushes the latest changes in the Glitch project to your GitHub repo. The Glitch project also looks out for Webhooks about changes to the GitHub repo, and runs a pull request when a push occurs.
+
+## Setup
 
 - Set a secret string for `GITHUB_WEBHOOK_SECRET` in the `.env` file in your Glitch project. 
 

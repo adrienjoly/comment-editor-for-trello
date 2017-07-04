@@ -7,8 +7,8 @@ var github = githubhook({
 
 github.listen();
 
-github.on('*', function (event, repo, ref, data) {
-    console.log("Pinged by GitHub!");
+github.on('push:glitch-github-sync', function (event, repo, ref, data) {
+    console.log("Received a push from GitHub!");
   
     var sys  = require('util'),
         exec = require('child_process').exec,
