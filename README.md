@@ -4,9 +4,11 @@ Experimental two-way syncing between a Glitch project and a GitHub repo, using [
 
 Glitch takes periodic snapshots of a project with git. When a new snapshot is taken, a git hook pushes the latest changes in the Glitch project to your GitHub repo. The Glitch project also looks out for Webhooks about changes to the GitHub repo, and runs a pull request to get the latest changes.
 
+The result is syncing of changes when they're made on [Glitch](https://glitch.com/edit/#!/glitch-github-sync) or [GitHub](https://github.com/garethx/glitch-github-sync).
+
 ## Setup
 
-- [Remix this project](https://glitch.com/edit/#!/remix/glitch-github-sync).
+- [Remix this GLitch project](https://glitch.com/edit/#!/remix/glitch-github-sync).
 
 - Create a new repo on GitHub, initializing it with a readme. Then export your Glitch project to that repo.
 
