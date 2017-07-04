@@ -4,6 +4,17 @@
 // init project
 var express = require('express');
 var app = express();
+var githubhook = require('githubhook');
+var github = githubhook({
+  port: process.env.PORT,
+  secret: process.env.GITHUB_WEBHOOK_SECRET
+});
+
+github.listen();
+
+github.on('*', function (event, repo, ref, data) {
+  console.log("Ping!");
+});
 
 // we've started you off with Express, 
 // but feel free to use whatever libs or frameworks you'd like through `package.json`.
