@@ -20,5 +20,3 @@ Then create a git hook in .git/hooks called `post-commit`, with the following co
 #!/bin/sh
 git pull https://github.com/yourUsername/yourRepo.git
 ```
-
-
