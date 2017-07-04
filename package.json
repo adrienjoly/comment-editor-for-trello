@@ -1,29 +1,24 @@
 {
-  "//1": "describes your app and its dependencies",
-  "//2": "https://docs.npmjs.com/files/package.json",
-  "//3": "updating this file will download and update your packages",
-
-  "name": "my-glitch-app",
+  "name": "standing-hoe",
   "version": "0.0.1",
-  "description": "What am I about?",
+  "description": "Glitch-GitHub sync using git hooks and githubhook",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
   },
   "dependencies": {
-    "express": "^4.15.3",
     "githubhook": "*"
   },
   "engines": {
     "node": "8.1.x"
   },
   "repository": {
-    "url": "https://glitch.com/edit/#!/welcome-project"
+    "url": "https://github.com/garethx/standing-hoe"
   },
   "license": "MIT",
   "keywords": [
     "node",
     "glitch",
-    "express"
+    "github"
   ]
 }

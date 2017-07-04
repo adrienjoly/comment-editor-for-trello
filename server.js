@@ -1,9 +1,4 @@
-// server.js
-// where your node app starts
-
 // init project
-var express = require('express');
-var app = express();
 var githubhook = require('githubhook');
 var github = githubhook({
   port: process.env.PORT,
@@ -23,7 +18,7 @@ github.on('*', function (event, repo, ref, data) {
         if (error){ // There was an error executing our script
           console.err(error);
         } else { // Script ran ok
-          console.log("git.sh run ok: ", stdout);
+          console.log("git.sh ran ok: ", stdout);
         }
     });  
 });
