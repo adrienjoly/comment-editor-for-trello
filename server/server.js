@@ -6,6 +6,14 @@ const rp = require('request-promise');
 const mustacheExpress = require('mustache-express');
 const exec = require('child_process').exec;
 
+if (!process.env.APP_KEY) {
+  console.error('WARNING: don\'t forget to set the APP_KEY environment variable, for Trello API.');
+}
+
+if (!process.env.GITHUB_WEBHOOK_SECRET) {
+  console.error('WARNING: don\'t forget to set the GITHUB_WEBHOOK_SECRET environment variable, for synchronising the source code of this Glitch with Github.');
+}
+
 // setup github hook (for sync of source code between glitch and github)
 const GithubWebHook = require('express-github-webhook');
 const github = GithubWebHook({
@@ -53,3 +61,4 @@ require('./routes.js')(app);
 const listener = app.listen(process.env.PORT, () => {
   console.log('Server up and running 🏃');
 });
+
