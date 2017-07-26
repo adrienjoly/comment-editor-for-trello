@@ -23,7 +23,7 @@ app.use(github); // use our middleware
 
 //github.listen();
 
-github.on('push:glitch-github-sync', function (event, repo, ref, data) {
+github.on('push', function (event, repo, ref, data) {
     console.log("Received a push from GitHub!");
   
     var sys  = require('util'),
