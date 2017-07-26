@@ -1,3 +1,4 @@
 .env
+.data
 .git-credentials
 node_modules
