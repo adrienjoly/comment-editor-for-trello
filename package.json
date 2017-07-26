@@ -2,9 +2,9 @@
   "name": "trello-outliner-power-up",
   "version": "0.2.0",
   "description": "A Trello Power-Up that allows you to edit card comments using an Outliner.",
-  "main": "server.js",
+  "main": "server/server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server/server.js"
   },
   "dependencies": {
     "bluebird": "^3.4.7",
