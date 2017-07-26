@@ -43,7 +43,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.engine('mustache', mustacheExpress());
 app.engine('html', mustacheExpress());
 app.set('view engine', 'mustache');
-app.set('views', __dirname + '/views');
+app.set('views', __dirname + '/../views');
 
 // compress our client side content before sending it over the wire
 app.use(compression());
