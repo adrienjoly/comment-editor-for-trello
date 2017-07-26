@@ -1,0 +1,24 @@
+{
+  "name": "glitch-github-sync",
+  "version": "0.0.1",
+  "description": "Glitch-GitHub sync using git hooks and githubhook",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "githubhook": "*"
+  },
+  "engines": {
+    "node": "8.1.x"
+  },
+  "repository": {
+    "url": "https://github.com/garethx/glitch-github-sync"
+  },
+  "license": "MIT",
+  "keywords": [
+    "node",
+    "glitch",
+    "github"
+  ]
+}
