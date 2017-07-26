@@ -23,6 +23,10 @@ app.use(github); // use our middleware
 
 //github.listen();
 
+github.on('*', function() {
+  console.log('got github event:', arguments);
+});
+
 github.on('push', function (event, repo, ref, data) {
     console.log("Received a push from GitHub!");
   
@@ -37,6 +41,11 @@ github.on('push', function (event, repo, ref, data) {
           console.log("git.sh ran ok: ", stdout);
         }
     });  
+});
+
+app.get('/', (req, res) => {
+  console.log('GET /');
+  res.send('ok');
 });
 
 const listener = app.listen(process.env.PORT, () => {
