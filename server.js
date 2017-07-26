@@ -1,13 +1,3 @@
-// init project
-/*
-var githubhook = require('githubhook');
-var github = githubhook({
-  port: process.env.PORT,
-  secret: process.env.GITHUB_WEBHOOK_SECRET
-});
-*/
-// TODO: use express-github-webhook, for express ?
-
 const express = require('express');
 const bodyParser = require('body-parser');
 const GithubWebHook = require('express-github-webhook');
@@ -18,14 +8,8 @@ const github = GithubWebHook({
 
 // use in your express app 
 let app = express();
-app.use(bodyParser.json()); // must use bodyParser in express 
-app.use(github); // use our middleware 
-
-//github.listen();
-
-github.on('*', function() {
-  console.log('got github event:', arguments);
-});
+app.use(bodyParser.json());
+app.use(github);
 
 github.on('push', function (event, repo, ref, data) {
     console.log("Received a push from GitHub!");
