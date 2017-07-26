@@ -1,27 +1,34 @@
 {
-  "name": "glitch-github-sync",
-  "version": "0.0.1",
-  "description": "Glitch-GitHub sync using git hooks and githubhook",
+  "name": "trello-outliner-power-up",
+  "version": "0.2.0",
+  "description": "A Trello Power-Up that allows you to edit card comments using an Outliner.",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
   },
   "dependencies": {
-    "body-parser": "^1.15.2",
+    "bluebird": "^3.4.7",
+    "compression": "1.6.2",
+    "cors": "^2.8.1",
     "express": "4.14.0",
     "express-github-webhook": "1.0.6",
-    "githubhook": "*"
+    "nedb": "^1.8.0",
+    "request": "^2.79.0",
+    "request-promise": "^4.1.1",
+    "body-parser": "^1.15.2",
+    "lodash": "^4.17.4",
+    "mustache-express": "^1.2.5"
   },
   "engines": {
     "node": "8.1.x"
   },
   "repository": {
-    "url": "https://github.com/garethx/glitch-github-sync"
+    "url": "https://github.com/adrienjoly/trello-outliner"
   },
   "license": "MIT",
   "keywords": [
     "node",
-    "glitch",
-    "github"
+    "hyperdev",
+    "express"
   ]
 }

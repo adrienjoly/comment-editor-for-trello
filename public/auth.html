@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://trello.com/power-ups/power-up.css">
+    <script src="https://trello.com/power-ups/power-up.min.js"></script>
+  </head>
+  <body>
+    <button id="auth-btn" type="submit" class="mod-primary">Authorize Card Snooze to Access Trello</button>
+    <script>
+      var Promise = TrelloPowerUp.Promise;
+      var t = TrelloPowerUp.iframe();
+      
+      var trelloAuthUrl = 'https://trello.com/1/authorize?expiration=never&name=Trello%20Outliner&scope=read,write&key=0b15414357140fe88faecea94f0a22b1&callback_method=fragment&return_url=https%3A%2F%2F' + window.location.host + '%2Fauth-success.html';
+      
+      var tokenLooksValid = function(token) {
+        return /^[0-9a-f]{64}$/.test(token);
+      }
+
+      document.getElementById('auth-btn').addEventListener('click', function(){
+        t.authorize(trelloAuthUrl, { height: 680, width: 580, validToken: tokenLooksValid })
+        .then(function(token){
+          // store the token in Trello private Power-Up storage
+          return t.set('member', 'private', 'token', token)
+        })
+        .then(function(){
+          // now that we have the token we needed lets go on to letting
+          // the user set the snooze time
+          return t.popup({
+            title: 'Outline a comment',
+            url: './comment-selector.html',
+            height: 411
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

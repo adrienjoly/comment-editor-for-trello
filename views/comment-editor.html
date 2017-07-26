@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://a.trellocdn.com/css/63834d177435ef6ba76764be22c29ae4/core.css">
+    <link rel="stylesheet" href="https://trello.com/power-ups/power-up.css">
+    <style>
+      .window {
+        display: block;
+        width: inherit;
+        margin: 0;
+        padding-right: 38px;
+      }
+      textarea {
+        max-width: none;
+        overflow: hidden;
+        word-wrap: break-word;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="window">
+      <div class="phenom mod-comment-type is-editing">
+        <div class="window-module-title window-module-title-no-divider">
+          <span class="window-module-title-icon icon-lg icon-comment"></span>
+          <h3>[Trello Outliner] Editing comment from card <a href="https://trello.com/c/{{comment.data.card.id}}" target="_blank">{{comment.data.card.name}}</a></h3>
+          <span class="editing-members js-editing-members hide"></span>
+        </div>
+        <div class="comment-frame">
+          <div class="comment-box">
+            <textarea class="comment-box-input js-new-comment-input" placeholder="Write a comment…" tabindex="1" dir="auto">{{comment.data.text}}</textarea>
+            <!--
+            <div class="comment-box-options">
+              <a class="comment-box-options-item js-comment-add-attachment" href="#" title="Add an attachment…"><span class="icon-sm icon-attachment"></span></a>
+              <a class="comment-box-options-item js-comment-mention-member" href="#" title="Mention a member…"><span class="icon-sm icon-mention"></span></a>
+              <a class="comment-box-options-item js-comment-add-emoji" href="#" title="Add emoji…"><span class="icon-sm icon-emoji"></span></a>
+              <a class="comment-box-options-item js-comment-add-card" href="#" title="Add card…"><span class="icon-sm icon-card"></span></a>
+            </div>
+            -->
+          </div>
+        </div>
+        <div class="edit-controls u-clearfix">
+          <div class="js-too-long-warning hide">
+            <p>Your comment is too long.</p>
+          </div>
+          <div class="js-is-empty-warning hide">
+            <p>You haven't typed anything!</p>
+          </div>
+          <input class="primary confirm js-save-edit" type="submit" value="Save" tabindex="2">
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script>
+      $('.js-save-edit').click(function() {
+        var value = $('.js-new-comment-input').val();
+        console.log('saving', value, '...');
+        $.post('/save', { token: '{{token}}', commentId: '{{comment.id}}', value: value }, function(res){
+          console.log('=>', res);
+        }).fail(function() {
+          console.log('=> FAIL:', arguments);
+        });
+      });
+    </script>
+  </body>
+</html>
