@@ -4,6 +4,7 @@ var github = githubhook({
   port: process.env.PORT,
   secret: process.env.GITHUB_WEBHOOK_SECRET
 });
+// TODO: use express-github-webhook, for express ?
 
 github.listen();
 
