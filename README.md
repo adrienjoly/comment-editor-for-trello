@@ -2,13 +2,17 @@
 
 A Trello Power-Up that allows you to edit card comments using an Outliner.
 
-![trello outliner teaser](docs/teaser.png)
+![trello outliner teaser](https://github.com/adrienjoly/trello-outliner/raw/master/docs/teaser.png)
 
 ▶ [Home page](https://adrienjoly.com/trello-outliner) (*`gh-pages` branch of the repo*)
 
 ▶ [More details](docs/codegeist-submission.md)
 
-▶ [Glitch](https://glitch.com/edit/#!/glitch-github-sync)
+▶ [Glitch](https://glitch.com/edit/#!/trello-outliner-github)
+
+### Development and production flow
+
+Everytime a commit is pushed to the `master` branch, it's also pushed to the glitch server, thanks to [glitch-github-sync](https://glitch.com/edit/#!/glitch-github-sync). Check glitch's logs for status and errors.
 
 ### Want to test this Power-up?
 
