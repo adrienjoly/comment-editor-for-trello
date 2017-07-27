@@ -42,6 +42,8 @@ function initEditor(token, commentId) {
     toggleChangedState(true);
   });
 
+  $input.focus();
+
   return {
     refreshLastSavedTime: refreshLastSavedTime,
   };
