@@ -9,28 +9,37 @@ function initEditor(token, commentId) {
     $lastSavedTime.text(new Date(date || new Date()).toLocaleTimeString());
   }
 
+  function toggleChangedState(hasChanged) {
+    $editor.toggleClass('has-changed', hasChanged);
+  }
+
+  function toggleSavingState(isSaving) {
+    $editor.toggleClass('is-saving', isSaving);
+    $save.attr('disabled', isSaving ? '' : null);
+  }
+
+  function toggleFailureState(hasFailed) {
+    $editor.toggleClass('has-failed-save', hasFailed);
+  }
+
   $('.js-save-edit').click(function() {
-    var value = $input.val();
-    console.log('saving', value, '...');
-    $editor.addClass('is-saving');
-    $save.attr('disabled', '');
-    $.post('/save', { token: token, commentId: commentId, value: value })
-    .then(function(res){
-      console.log('=>', res);
-      // TODO: make sure that res.ok
-      $editor.removeClass('has-changed');
-      refreshLastSavedTime();
-    }, function() {
-      console.log('=> FAIL:', arguments);
-    }).always(function() {
-      $editor.removeClass('is-saving');
-      $save.attr('disabled', null);
+    console.log('saving...');
+    toggleSavingState(true);
+    $.post('/save', { token: token, commentId: commentId, value: $input.val() })
+    .always(function(res){
+      console.log('=>', arguments);
+      toggleSavingState(false);
+      toggleChangedState(!res.ok);
+      toggleFailureState(!res.ok);
+      if (res.ok) {
+        refreshLastSavedTime();
+      }
     });
 
   });
 
   $input.on('keyup', function() {
-    $editor.addClass('has-changed');
+    toggleChangedState(true);
   });
 
   return {
