@@ -11,6 +11,24 @@ textarea {
   max-width: none;
   overflow: hidden;
   word-wrap: break-word;
+  overflow-y: scroll;
+}
+
+.comment-frame {
+  height: -moz-calc(100% - 110px);
+  height: -webkit-calc(100% - 110px);
+  height: calc(100% - 110px);
+}
+
+.window,
+.phenom,
+.comment-box,
+.comment-box-input {
+  height: 100%;
+}
+
+.comment-box-input, .comment-box-input:active, .comment-box-input:focus, .comment-box-input:hover {
+  border-bottom-width: 1px;
 }
 
 /* buttons */
