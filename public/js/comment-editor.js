@@ -81,6 +81,7 @@ function initEditor(token, commentId) {
           input = $input.val(),
           start = $input.prop('selectionStart'),
           end = $input.prop('selectionEnd');
+      // TODO: use (end - 1) in order to avoid moving next line too easily ?
       var output = applyIndents(input, start, end, indent);
       $input
         .val(output)
