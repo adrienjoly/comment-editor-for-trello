@@ -1,0 +1,14 @@
+.window {
+  display: block;
+  width: inherit;
+  margin: 0;
+  padding-right: 38px;
+}
+
+/* input */
+
+textarea {
+  max-width: none;
+  overflow: hidden;
+  word-wrap: break-word;
+}
