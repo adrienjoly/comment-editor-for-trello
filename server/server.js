@@ -23,9 +23,9 @@ const github = GithubWebHook({
 github.on('push', function (event, repo, ref, data) {
   console.log("Received a push from GitHub!");
   let child = exec('sh git.sh', function (error, stdout, stderr) {
-    if (error) { // There was an error executing our script
+    if (error) {
       console.err(error);
-    } else { // Script ran ok
+    } else {
       console.log("git.sh ran ok: ", stdout);
     }
   });
@@ -33,13 +33,13 @@ github.on('push', function (event, repo, ref, data) {
 
 Promise = require('bluebird');
 
-// use in your express app 
+// init web server
 let app = express();
 app.use(bodyParser.json());
 app.use(github);
 app.use(bodyParser.urlencoded({ extended: false }));
 
-// Register '.mustache' extension with The Mustache Express
+// register mustache as express' main view rendered
 app.engine('mustache', mustacheExpress());
 app.engine('html', mustacheExpress());
 app.set('view engine', 'mustache');
@@ -61,4 +61,3 @@ require('./routes.js')(app);
 const listener = app.listen(process.env.PORT, () => {
   console.log('Server up and running 🏃');
 });
-

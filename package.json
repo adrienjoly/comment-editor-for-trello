@@ -12,11 +12,9 @@
     "cors": "^2.8.1",
     "express": "4.14.0",
     "express-github-webhook": "1.0.6",
-    "nedb": "^1.8.0",
     "request": "^2.79.0",
     "request-promise": "^4.1.1",
     "body-parser": "^1.15.2",
-    "lodash": "^4.17.4",
     "mustache-express": "^1.2.5"
   },
   "engines": {
@@ -27,8 +25,5 @@
   },
   "license": "MIT",
   "keywords": [
-    "node",
-    "hyperdev",
-    "express"
   ]
 }
