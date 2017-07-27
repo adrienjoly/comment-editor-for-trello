@@ -58,7 +58,8 @@
     <script src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
     <script src="/js/comment-editor.js"></script>
     <script>
-      refreshLastSavedTime('{{comment.date}}');
+      var editor = initEditor('{{token}}', '{{comment.id}}');
+      editor.refreshLastSavedTime('{{comment.date}}');
     </script>
   </body>
 </html>
