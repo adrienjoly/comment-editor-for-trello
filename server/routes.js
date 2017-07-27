@@ -45,8 +45,17 @@ const routes = (app) => {
   // POST /save
   app.post('/save', Promise.coroutine(function* (req, res) {
     console.log('POST', req.path, req.params, req.body);
+    if (/\/test\/edit$/.test(req.headers.referer || '')) {
+      // mock endpoint, for testing the editor from /test/edit URL
+      return setTimeout(() => res.send({ ok: true }), 4000);
+    }
     return res.send({ ok: yield saveCardComment(req.body) });
     // TODO: return status code based on result, instead of `ok`
+  })),
+
+  app.get('/test/edit', (req, res) => res.render('comment-editor.html', {
+    comment: { data: { board: {}, card: {} }, date: new Date().toISOString() },
+    token: 'dummy_token',
   })),
 
   // GET /edit
