@@ -1,5 +1,7 @@
 function initEditor(token, commentId) {
 
+  var TAB_KEY_CODE = 9;
+
   var $editor = $('.mod-comment-type');
   var $input = $('.js-new-comment-input');
   var $lastSavedTime = $('.date > span');
@@ -38,7 +40,24 @@ function initEditor(token, commentId) {
 
   });
 
-  $input.on('keyup', function() {
+  function insertTextAtCursor(text) {
+    var cursorPos = $input.prop('selectionStart');
+    var v = $input.val();
+    var textBefore = v.substring(0,  cursorPos);
+    var textAfter  = v.substring(cursorPos, v.length);
+    $input.val(textBefore + text + textAfter);
+  }
+
+  $input.on('keydown', function(evt) {
+    if(evt.keyCode == TAB_KEY_CODE) {
+      insertTextAtCursor('\t');
+      // TODO: after checking that tab is persisted in trello's db, put it at start of line instead
+      evt.preventDefault();
+      return false;
+    }
+  });
+
+  $input.on("change keyup paste", function() {
     toggleChangedState(true);
   });
 
