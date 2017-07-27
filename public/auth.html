@@ -5,7 +5,7 @@
     <script src="https://trello.com/power-ups/power-up.min.js"></script>
   </head>
   <body>
-    <button id="auth-btn" type="submit" class="mod-primary">Authorize Card Snooze to Access Trello</button>
+    <button id="auth-btn" type="submit" class="mod-primary">Authorize Trello Outliner to Access Trello</button>
     <script>
       var Promise = TrelloPowerUp.Promise;
       var t = TrelloPowerUp.iframe();
@@ -23,8 +23,7 @@
           return t.set('member', 'private', 'token', token)
         })
         .then(function(){
-          // now that we have the token we needed lets go on to letting
-          // the user set the snooze time
+          // now that we have the token we needed
           return t.popup({
             title: 'Outline a comment',
             url: './comment-selector.html',
