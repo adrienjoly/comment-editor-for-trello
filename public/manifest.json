@@ -2,7 +2,7 @@
   "name": "Trello Outliner",
   "details":"The Trello Outliner Power-Up allows you to edit card comments using an Outliner.",
   "icon": {
-    "url": "https://cdn.glitch.com/07656aca-9ccd-4ad1-823c-dbd039f7fccc%2Fzzz.svg"
+    "url": "https://github.com/adrienjoly/trello-outliner/raw/master/icon.png"
   },
   "author": "Adrien Joly",
   "capabilities": [

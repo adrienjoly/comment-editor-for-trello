@@ -2,6 +2,7 @@
   "name": "trello-outliner-power-up",
   "version": "0.2.0",
   "description": "A Trello Power-Up that allows you to edit card comments using an Outliner.",
+  "homepage": "https://adrienjoly.com/trello-outliner",
   "main": "server/server.js",
   "scripts": {
     "start": "node server/server.js"
@@ -23,7 +24,14 @@
   "repository": {
     "url": "https://github.com/adrienjoly/trello-outliner"
   },
+  "author": "Adrien Joly",
   "license": "MIT",
   "keywords": [
+    "trello",
+    "productivity",
+    "add-on",
+    "editor",
+    "glitch.com",
+    "outliner"
   ]
 }
