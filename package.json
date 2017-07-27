@@ -5,6 +5,7 @@
   "homepage": "https://adrienjoly.com/trello-outliner",
   "main": "server/server.js",
   "scripts": {
+    "watch": "PORT=8080 onchange '**/*.js' '**/*.html' -i -- npm start",
     "start": "node server/server.js"
   },
   "dependencies": {
@@ -33,5 +34,8 @@
     "editor",
     "glitch.com",
     "outliner"
-  ]
+  ],
+  "devDependencies": {
+    "onchange": "^3.2.1"
+  }
 }

@@ -59,5 +59,5 @@ require('./routes.js')(app);
 
 // listen for requests :)
 const listener = app.listen(process.env.PORT, () => {
-  console.log('Server up and running 🏃');
+  console.log(`Server up and running on port ${process.env.PORT} 🏃`);
 });
