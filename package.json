@@ -1,6 +1,6 @@
 {
   "name": "trello-outliner-power-up",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "A Trello Power-Up that allows you to edit card comments using an Outliner.",
   "homepage": "https://adrienjoly.com/trello-outliner",
   "main": "server/server.js",
