@@ -53,6 +53,7 @@ app.use(cors({ origin: '*' }));
 
 // http://expressjs.com/en/starter/static-files.html
 app.use(express.static('public'));
+app.use(express.static('node_modules'));
 
 // Setup server routes
 require('./routes.js')(app);
