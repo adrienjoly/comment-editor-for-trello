@@ -11,6 +11,10 @@ function initEditor(token, commentId, SimpleMDE) {
     $lastSavedTime.text(new Date(date || new Date()).toLocaleTimeString());
   }
 
+  function hasChangedState() {
+    return $editor.hasClass('has-changed');
+  }
+
   function toggleChangedState(hasChanged) {
     $editor.toggleClass('has-changed', hasChanged);
   }
@@ -59,6 +63,18 @@ function initEditor(token, commentId, SimpleMDE) {
   simplemde.codemirror.on('change', function(){
     toggleChangedState(true);
   });
+
+  window.onbeforeunload = function (e) {
+    if (!hasChangedState()) return;
+    var message = '🚧 You should save your comment first! \nAre you sure you want to close that window now?',
+    e = e || window.event;
+    // For IE and Firefox
+    if (e) {
+      e.returnValue = message;
+    }
+    // For Safari
+    return message;
+  };
 
   return {
     refreshLastSavedTime: refreshLastSavedTime,
