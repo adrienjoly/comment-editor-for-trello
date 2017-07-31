@@ -51,10 +51,11 @@
 
       </div>
     </div>
-    <script src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script src="/jquery/dist/jquery.min.js"></script>
+    <script src="/simplemde/dist/simplemde.min.js"></script>
     <script src="/js/comment-editor.js"></script>
     <script>
-      var editor = initEditor('{{token}}', '{{comment.id}}');
+      var editor = initEditor('{{token}}', '{{comment.id}}', SimpleMDE);
       editor.refreshLastSavedTime('{{comment.date}}');
     </script>
   </body>

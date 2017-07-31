@@ -7,6 +7,7 @@
 
 /* input */
 
+/*
 textarea {
   max-width: none;
   overflow: hidden;
@@ -19,11 +20,12 @@ textarea {
   height: -webkit-calc(100% - 110px);
   height: calc(100% - 110px);
 }
+*/
 
 .window,
-.phenom,
+.phenom/* ,
 .comment-box,
-.comment-box-input {
+.comment-box-input */ {
   height: 100%;
 }
 

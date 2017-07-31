@@ -44,10 +44,10 @@ const routes = (app) => {
 
   // POST /save
   app.post('/save', Promise.coroutine(function* (req, res) {
-    console.log('POST', req.path, req.params, req.body);
+    console.log('POST', req.path, req.body);
     if (/\/test\/edit$/.test(req.headers.referer || '')) {
       // mock endpoint, for testing the editor from /test/edit URL
-      return setTimeout(() => res.send({ ok: true }), 4000);
+      return setTimeout(() => res.send({ ok: req.body }), 1000);
     }
     return res.send({ ok: yield saveCardComment(req.body) });
     // TODO: return status code based on result, instead of `ok`
