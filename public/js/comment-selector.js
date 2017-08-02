@@ -24,7 +24,7 @@ t.get('member', 'private', 'token')
         });
         container.appendChild(li);
       });
-      $('.js-spinner').addClass('hide');
+      $('.js-spinner').hide();
       t.render(function(){
         t.sizeTo('#comments'); // resize popup based on content
       });
