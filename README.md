@@ -1,14 +1,12 @@
-# Trello Outliner
+# ![](icon-32px.png) Trello Outliner
 
 A Trello Power-Up that allows you to edit card comments using an Outliner.
 
 ![trello outliner teaser](https://github.com/adrienjoly/trello-outliner/raw/master/docs/markdown-editing.gif)
 
-▶ [Home page](https://adrienjoly.com/trello-outliner) (*`gh-pages` branch of the repo*)
+▶ More details: [Submission on Atlassian's Codegeist](https://devpost.com/software/trello-outliner-lpv3zt)
 
-▶ [More details](docs/codegeist-submission.md)
-
-▶ [Glitch](https://glitch.com/edit/#!/trello-outliner-github)
+▶ Source code: [Glitch](https://glitch.com/edit/#!/trello-outliner-github) (*feel free to remix it!*)
 
 ### For whom was it designed for, and why?
 
@@ -26,6 +24,12 @@ Still not getting it? 🤔 If you want to know more about my Trello-based produc
 ### Development and production flow
 
 Everytime a commit is pushed to the `master` branch, it's also pushed to the glitch server, thanks to [glitch-github-sync](https://glitch.com/edit/#!/glitch-github-sync). Check glitch's logs for status and errors.
+
+### Installation
+
+This Power-up is currently **under review** by Trello, but will hopefully be publicly available before September 2017. If you want to be notified when it's done, feel free to sign up [there](http://eepurl.com/cWtVi1).
+
+In the mean time, you can **test it from a public sample board**, by following the instructions below.
 
 ### Want to test this Power-up?
 
