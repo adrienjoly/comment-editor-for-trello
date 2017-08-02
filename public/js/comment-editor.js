@@ -34,11 +34,11 @@ function initEditor(token, commentId, SimpleMDE) {
   }
 
   $('.js-save-edit').click(function() {
-    console.log('saving...');
+    //console.log('saving...');
     toggleSavingState(true);
     $.post('/save', { token: token, commentId: commentId, value: getValue() })
     .always(function(res){
-      console.log('=>', arguments);
+      //console.log('=>', arguments);
       toggleSavingState(false);
       toggleChangedState(!res.ok);
       toggleFailureState(!res.ok);

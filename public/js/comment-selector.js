@@ -13,7 +13,7 @@ t.get('member', 'private', 'token')
   t.card('id').then(function(card) {
     // https://developers.trello.com/advanced-reference/card#get-1-cards-card-id-or-shortlink-actions
     $.get('/comments?', { token, cardId: card.id }, function(res){
-      console.log('comments => ', res.comments);
+      //console.log('comments => ', res.comments);
       res.comments.forEach(function(comment) {
         const li = document.createElement('li');
         li.appendChild(document.createTextNode(comment.data.text));
@@ -30,6 +30,7 @@ t.get('member', 'private', 'token')
     });
   })
   .catch(function(err){
-    console.error('Error loading card comments:', err);
+    alert('Oops, there was an error while loading comments. Can you refresh and try again?');
+    //console.error('Error loading card comments:', err);
   });
 });
