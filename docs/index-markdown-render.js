@@ -32,6 +32,6 @@ function renderMd(file, MD_URL_PREFIX) {
     }
   }
 
-  xhr.open('GET', MD_URL_PREFIX + file);
+  xhr.open('GET', file);
   xhr.send();
 }
