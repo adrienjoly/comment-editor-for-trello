@@ -23,3 +23,11 @@ code {
   padding: 0 8px;
   font-family: Consolas, Courier, monospace;
 }
+
+#content {
+  width: 100%;
+}
+
+img {
+  max-width: 100%;
+}
