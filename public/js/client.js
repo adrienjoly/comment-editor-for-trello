@@ -20,7 +20,7 @@ TrelloPowerUp.initialize({
             });
           } else {
             return context.popup({
-              title: 'Outline a comment',
+              title: 'Select a comment to edit',
               url: './comment-selector.html',
               height: 411
             });
