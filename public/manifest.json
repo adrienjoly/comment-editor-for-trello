@@ -1,6 +1,6 @@
 {
   "name": "__Outliner",
-  "details":"This Power-Up allows you to:\n\n- edit card comments with vusible formatting (*WYSIWYG*)\n- prevent loosing your changes accidentally while editing\n- use the TAB key to add hierarchy in your bullet-point lists.\n- and be more focused while taking notes, by e",
+  "details": "This Power-Up turns your regular card comments into a living notebook.\n\n- Edit comments with **visible formatting** (*WYSIWYG*)\n- **Don't lose your changes** accidentally while editing\n- Outliner: add **hierarchy** in your bullet-point lists, by pressing the `TAB` key (`⇥`).\n- Be more **focused** while taking notes, by editing in a separate tab.\n\n## Screenshot ![](https://github.com/adrienjoly/trello-outliner/raw/master/docs/markdown-editing.gif)",
   "icon": {
     "url": "./icon.png"
   },
