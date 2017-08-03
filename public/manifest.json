@@ -1,6 +1,6 @@
 {
   "name": "Trello Outliner",
-  "details":"The Trello Outliner Power-Up allows you to edit card comments using an Outliner.",
+  "details":"This Power-Up allows you to: - edit card comments using an Outliner. -B",
   "icon": {
     "url": "./icon.png"
   },
