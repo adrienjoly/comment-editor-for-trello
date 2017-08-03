@@ -4,7 +4,7 @@ var Promise = TrelloPowerUp.Promise;
 var t = TrelloPowerUp.iframe();
 
 t.render(function(){
-  t.sizeTo('#comments').done(); // resize popup based on content
+  t.sizeTo('#comments'); // resize popup based on content
 });
 
 const container = document.getElementById('comments');
@@ -12,7 +12,7 @@ const container = document.getElementById('comments');
 // get user's token
 t.get('member', 'private', 'token')
 .then(function(token) {
-    
+  
   // load comments
   t.card('id').then(function(card) {
     // https://developers.trello.com/advanced-reference/card#get-1-cards-card-id-or-shortlink-actions
