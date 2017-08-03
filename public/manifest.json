@@ -1,6 +1,6 @@
 {
-  "name": "Trello Outliner",
-  "details":"This Power-Up allows you to: - edit card comments using an Outliner. -B",
+  "name": "__Outliner",
+  "details":"This Power-Up allows you to:\n\n- edit card comments with vusible formatting (*WYSIWYG*)\n- prevent loosing your changes accidentally while editing\n- use the TAB key to add hierarchy in your bullet-point lists.\n- and be more focused while taking notes, by e",
   "icon": {
     "url": "./icon.png"
   },
