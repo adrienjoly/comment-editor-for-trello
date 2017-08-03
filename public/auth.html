@@ -5,12 +5,12 @@
     <script src="https://trello.com/power-ups/power-up.min.js"></script>
   </head>
   <body>
-    <button id="auth-btn" type="submit" class="mod-primary">Authorize Trello Outliner to Access Trello</button>
+    <button id="auth-btn" type="submit" class="mod-primary">Authorize this Power-up to Access Trello</button>
     <script>
       var Promise = TrelloPowerUp.Promise;
       var t = TrelloPowerUp.iframe();
       
-      var trelloAuthUrl = 'https://trello.com/1/authorize?expiration=never&name=Trello%20Outliner&scope=read,write&key=0b15414357140fe88faecea94f0a22b1&callback_method=fragment&return_url=https%3A%2F%2F' + window.location.host + '%2Fauth-success.html';
+      var trelloAuthUrl = 'https://trello.com/1/authorize?expiration=never&name=Advanced%20Comment%20Editor%20by%20AJ&scope=read,write&key=0b15414357140fe88faecea94f0a22b1&callback_method=fragment&return_url=https%3A%2F%2F' + window.location.host + '%2Fauth-success.html';
       
       var tokenLooksValid = function(token) {
         return /^[0-9a-f]{64}$/.test(token);
@@ -27,7 +27,7 @@
           return t.popup({
             title: 'Select a comment to edit',
             url: './comment-selector.html',
-            height: 411
+            height: 75
           });
         });
       });
