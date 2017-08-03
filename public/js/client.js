@@ -10,7 +10,7 @@ TrelloPowerUp.initialize({
     .then(function(token){
       return [{
         icon: 'https://github.com/adrienjoly/trello-outliner/raw/master/icon-transparent.png',
-        text: 'Outline a comment',
+        text: 'Edit Comment',
         callback: function(context) {
           if (!token) {
             context.popup({

@@ -9,6 +9,10 @@ const container = document.getElementById('comments');
 t.get('member', 'private', 'token')
 .then(function(token) {
   
+  t.render(function(){
+    t.sizeTo('#comments'); // resize popup based on content
+  });
+  
   // load comments
   t.card('id').then(function(card) {
     // https://developers.trello.com/advanced-reference/card#get-1-cards-card-id-or-shortlink-actions
@@ -25,9 +29,7 @@ t.get('member', 'private', 'token')
         container.appendChild(li);
       });
       $('.js-spinner').hide();
-      t.render(function(){
-        t.sizeTo('#comments'); // resize popup based on content
-      });
+      //setTimeout(function(){}, 100);
     });
   })
   .catch(function(err){
