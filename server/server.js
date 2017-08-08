@@ -58,6 +58,18 @@ app.use(express.static('node_modules'));
 // Setup server routes
 require('./routes.js')(app);
 
+// Keep Glitch from sleeping by periodically sending ourselves a http request
+setInterval(function() {
+  console.log('❤️ Keep Alive Heartbeat');
+  rp('https://glitch.com/#!/project/trello-outliner-github')
+  .then(() => {
+    console.log('💗 Successfully sent http request to Glitch to stay awake.');
+  })
+  .catch((err) => {
+    console.error(`💔 Error sending http request to Glitch to stay awake: ${err.message}`);
+  });
+}, 150000); // every 2.5 minutes
+
 // listen for requests :)
 const listener = app.listen(process.env.PORT, () => {
   console.log(`Server up and running on port ${process.env.PORT} 🏃`);
