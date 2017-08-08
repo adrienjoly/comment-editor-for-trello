@@ -15,17 +15,27 @@ function initEditor(token, commentId, SimpleMDE) {
     return $editor.hasClass('has-changed');
   }
 
+  function hasSavingState() {
+    return $editor.hasClass('is-saving');
+  }
+
   function toggleChangedState(hasChanged) {
     $editor.toggleClass('has-changed', hasChanged);
+    applyState();
   }
 
   function toggleSavingState(isSaving) {
     $editor.toggleClass('is-saving', isSaving);
-    $save.attr('disabled', isSaving ? '' : null);
+    applyState();
   }
 
   function toggleFailureState(hasFailed) {
     $editor.toggleClass('has-failed-save', hasFailed);
+    applyState();
+  }
+
+  function applyState() {
+    $save.attr('disabled', hasSavingState() || !hasChangedState() ? '' : null);
   }
 
   function getValue() {

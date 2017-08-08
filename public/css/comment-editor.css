@@ -45,6 +45,7 @@ textarea {
   margin-top: 0;
 }
 
+/*
 .phenom.is-editing .edit-controls {
   display: none;
 }
@@ -52,6 +53,7 @@ textarea {
 .phenom.is-editing.has-changed .edit-controls {
   display: block;
 }
+*/
 
 /* status bar */
 
