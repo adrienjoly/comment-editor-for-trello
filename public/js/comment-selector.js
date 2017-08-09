@@ -9,6 +9,12 @@ t.render(function(){
 
 const container = document.getElementById('comments');
 
+const myMemberId = t.getContext().member;
+
+function myOwnComment(comment) {
+  return comment.memberCreator.id === myMemberId;
+}
+
 // get user's token
 t.get('member', 'private', 'token')
 .then(function(token) {
@@ -25,7 +31,7 @@ t.get('member', 'private', 'token')
         container.appendChild(p);
         return;
       }
-      res.comments.forEach(function(comment) {
+      res.comments.filter(myOwnComment).forEach(function(comment) {
         const li = document.createElement('li');
         li.appendChild(document.createTextNode(comment.data.text));
         li.addEventListener('click', function(){
