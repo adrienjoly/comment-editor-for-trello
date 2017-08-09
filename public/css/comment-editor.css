@@ -15,6 +15,27 @@ body {
   padding-right: 38px;
 }
 
+/* buttons */
+
+.window-buttons {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 30px;
+  padding: 4px;
+  z-index: 2;
+}
+
+.window-button {
+  color: rgba(0,0,0,.3);
+  -webkit-transition: background-color 350ms,color 150ms;
+  transition: background-color 350ms,color 150ms;
+}
+
+.window-button {
+  color: rgba(0,0,0,.6);
+}
+
 /* input */
 
 /*

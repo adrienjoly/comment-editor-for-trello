@@ -18,11 +18,15 @@ function initEditor(token, commentId, SimpleMDE) {
   var $lastSavedTime = $('.date > span');
   var $save = $('.js-save-edit');
 
+  function confirmIfPendingChanges() {
+    return !hasChangedState() || confirm(CLOSE_MESSAGE);
+  }
+
   // ways to close the overlay, if opened inside of trello ui
   if (inIframe()) {
-    function closeEditor(){
-      var t = TrelloPowerUp.iframe();
-      if (!hasChangedState() || confirm(CLOSE_MESSAGE)) {
+    var t = TrelloPowerUp.iframe();
+    function closeEditor(confirmed){
+      if (confirmed === true || confirmIfPendingChanges()) {
         t.closeOverlay();
       }
     }
@@ -33,8 +37,15 @@ function initEditor(token, commentId, SimpleMDE) {
         closeEditor()
       }
     });
+    $('.js-new-tab').click(function() {
+      if (confirmIfPendingChanges()) {
+        window.open(window.location.href);
+        closeEditor(true);
+      }
+    });
   } else {
     $('.js-close-window').hide();
+    $('.js-new-tab').hide();
   }
 
   function refreshLastSavedTime(date) {
