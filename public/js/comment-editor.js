@@ -1,11 +1,41 @@
+/* global TrelloPowerUp */
+
 function initEditor(token, commentId, SimpleMDE) {
 
   var TAB_KEY_CODE = 9;
+  var CLOSE_MESSAGE = '🚧 You should save your comment first! \nAre you sure you want to close that window now?';
+
+  function inIframe() {
+    try {
+      return window.self !== window.top;
+    } catch (e) {
+      return true;
+    }
+  }
 
   var $editor = $('.mod-comment-type');
   var $input = $('.js-new-comment-input');
   var $lastSavedTime = $('.date > span');
   var $save = $('.js-save-edit');
+
+  // ways to close the overlay, if opened inside of trello ui
+  if (inIframe()) {
+    function closeEditor(){
+      var t = TrelloPowerUp.iframe();
+      if (!hasChangedState() || confirm(CLOSE_MESSAGE)) {
+        t.closeOverlay();
+      }
+    }
+    $('.js-close-window').click(closeEditor);
+    $('.window-overlay').click(closeEditor);
+    $(document).keyup(function(e) {
+      if (e.keyCode == 27) { // escape key maps to keycode `27`
+        closeEditor()
+      }
+    });
+  } else {
+    $('.js-close-window').hide();
+  }
 
   function refreshLastSavedTime(date) {
     $lastSavedTime.text(new Date(date || new Date()).toLocaleTimeString());
@@ -76,14 +106,13 @@ function initEditor(token, commentId, SimpleMDE) {
 
   window.onbeforeunload = function (e) {
     if (!hasChangedState()) return;
-    var message = '🚧 You should save your comment first! \nAre you sure you want to close that window now?',
     e = e || window.event;
     // For IE and Firefox
     if (e) {
-      e.returnValue = message;
+      e.returnValue = CLOSE_MESSAGE;
     }
     // For Safari
-    return message;
+    return CLOSE_MESSAGE;
   };
 
   return {

@@ -30,7 +30,12 @@ t.get('member', 'private', 'token')
         li.appendChild(document.createTextNode(comment.data.text));
         li.addEventListener('click', function(){
           // open comment outliner (editor) in new tab
-          window.open(`/edit/${card.id}/${comment.id}/${token}/${comment.date}`);
+          const url = `/edit/${card.id}/${comment.id}/${token}/${comment.date}`;
+          //window.open(url);
+          t.overlay({
+            url: url,
+            args: {}
+          });
           t.closePopup();
         });
         container.appendChild(li);

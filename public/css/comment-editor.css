@@ -1,3 +1,13 @@
+body {
+  background: initial;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.window-overlay {
+  display: block;
+}
+
 .window {
   display: block;
   width: inherit;
@@ -22,8 +32,8 @@ textarea {
 }
 */
 
-.window,
 .phenom/* ,
+.window,
 .comment-box,
 .comment-box-input */ {
   height: 100%;
@@ -43,6 +53,7 @@ textarea {
 
 .edit-controls .js-save-edit {
   margin-top: 0;
+  margin-bottom: 20px;
 }
 
 /*
