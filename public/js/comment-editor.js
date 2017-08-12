@@ -31,7 +31,11 @@ function initEditor(token, commentId, SimpleMDE) {
       }
     }
     $('.js-close-window').click(closeEditor);
-    $('.window-overlay').click(closeEditor);
+    $('.window-overlay').click(function(e){
+      if(e.target === this){ // ignore clicks on child elements
+        closeEditor();
+      }
+    });
     $(document).keyup(function(e) {
       if (e.keyCode == 27) { // escape key maps to keycode `27`
         closeEditor()

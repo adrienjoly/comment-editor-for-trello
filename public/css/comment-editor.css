@@ -1,11 +1,14 @@
 body {
   background: initial;
   padding: 20px;
-  overflow: hidden;
+  box-sizing: border-box;
+  min-height: 100%;
 }
 
 .window-overlay {
   display: block;
+  overflow-y: scroll;
+  position: absolute;
 }
 
 .window {
@@ -13,6 +16,8 @@ body {
   width: inherit;
   margin: 0;
   padding-right: 38px;
+  box-sizing: border-box;
+  overflow-y: scroll;
 }
 
 /* buttons */
