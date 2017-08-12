@@ -113,6 +113,7 @@ function initEditor(token, commentId, SimpleMDE) {
     placeholder: $input.attr('placeholder'),
     codeSyntaxHighlighting: false, // TODO: read https://github.com/sparksuite/simplemde-markdown-editor
     status: false,
+    hideIcons: [ 'side-by-side', 'fullscreen' ] // TODO: see github issues #1 and #2
   });
 
   simplemde.codemirror.on('change', function(){
