@@ -43,6 +43,11 @@ body {
 
 /* input */
 
+/* fix to prevent bottom margins after each line, on firefox */
+.CodeMirror pre::after {
+  display: none;
+}
+
 /*
 textarea {
   max-width: none;
