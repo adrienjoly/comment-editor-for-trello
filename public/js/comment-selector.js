@@ -25,6 +25,14 @@ t.get('member', 'private', 'token')
     $.get('/comments?', { token, cardId: card.id }, function(res){
       //console.log('comments => ', res.comments);
       $('.js-spinner').hide();
+      if (res.comments === false) {
+        const p = document.createElement('p');
+        p.appendChild(document.createTextNode('🚧 Expired auth token. Please try again.'));
+        container.appendChild(p);
+        localStorage.setItem('token', token);
+        t.remove('member', 'private', 'token'); // will cause auth popup to display on next click
+        return;
+      }
       if (!res.comments.length) {
         const p = document.createElement('p');
         p.appendChild(document.createTextNode('Please add a comment to your card first. Then, you will be able to edit it by clicking this button again.'));
