@@ -33,13 +33,14 @@ t.get('member', 'private', 'token')
         t.remove('member', 'private', 'token'); // will cause auth popup to display on next click
         return;
       }
-      if (!res.comments.length) {
+      const comments = res.comments.filter(myOwnComment);
+      if (!comments.length) {
         const p = document.createElement('p');
         p.appendChild(document.createTextNode('Please add a comment to your card first. Then, you will be able to edit it by clicking this button again.'));
         container.appendChild(p);
         return;
       }
-      res.comments.filter(myOwnComment).forEach(function(comment) {
+      comments.forEach(function(comment) {
         const li = document.createElement('li');
         li.appendChild(document.createTextNode(comment.data.text));
         li.addEventListener('click', function(){
