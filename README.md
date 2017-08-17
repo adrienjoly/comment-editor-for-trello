@@ -1,4 +1,6 @@
-# ![](https://github.com/adrienjoly/trello-outliner/raw/master/docs/icon-32px.png) Trello Outliner
+# ![](https://github.com/adrienjoly/trello-outliner/raw/master/docs/icon-32px.png) Comment Editor by AJ
+
+*Previously announced as "Trello Outliner".*
 
 A Trello Power-Up that allows you to edit card comments using an Outliner.
 
