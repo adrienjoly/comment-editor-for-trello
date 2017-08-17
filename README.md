@@ -14,9 +14,9 @@ A Trello Power-Up that allows you to edit card comments using an Outliner.
 
 ### For whom was it designed for, and why?
 
-Trello Outliner is made for people who leverage Markdown-formatted comments to take and edit structured notes.
+**Comment Editor by AJ** is designed for Trello users who also do a lot of structured note-taking.
 
-It extends that experience with:
+It allows you to edit Trello card comments with the ease and comfort of a real note-taking application:
 
 - a full-screen editor, for more focus / less distractions
 - WYSIWYG Markdown editing
@@ -31,4 +31,3 @@ Still not getting it? 🤔
 ### Development and production flow
 
 Everytime a commit is pushed to the `master` branch, it's also pushed to the glitch server, thanks to [glitch-github-sync](https://glitch.com/edit/#!/glitch-github-sync). Check glitch's logs for status and errors.
-
