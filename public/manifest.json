@@ -1,10 +1,10 @@
 {
-  "name": "Test Comment Editor",
+  "name": "Test PO",
   "details": "This Power-Up turns your regular card comments into a living notebook.\n\n- Edit comments with **visible formatting** (*WYSIWYG*)\n- Outliner: add **hierarchy** in your bullet-point lists, by pressing the `TAB` key (`⇥`).\n- Be more **focused** while taking notes, by editing in a separate tab.\n- **Don't lose your changes** accidentally while editing.\n\n**Demo:**\n\n![](https://github.com/adrienjoly/trello-outliner/raw/master/docs/markdown-editing.gif)",
   "icon": {
     "url": "./icon.png"
   },
-  "author": "Adrien Joly",
+  "author": "Shilpa N",
   "capabilities": [
     "callback",
     "card-buttons"
