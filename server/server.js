@@ -68,7 +68,7 @@ setInterval(function() {
   .catch((err) => {
     console.error(`💔 Error sending http request to Glitch to stay awake: ${err.message}`);
   });
-}, 150000); // every 2.5 minutes
+}, 15000000); // every 2.5 minutes
 
 // listen for requests :)
 const listener = app.listen(process.env.PORT, () => {
