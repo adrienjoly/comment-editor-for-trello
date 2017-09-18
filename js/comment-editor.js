@@ -2,6 +2,8 @@
 
 function initEditor(token, commentId, SimpleMDE) {
 
+  const trelloApi = 'https://api.trello.com/1';
+  const key = '0b15414357140fe88faecea94f0a22b1';
   var TAB_KEY_CODE = 9;
   var CLOSE_MESSAGE = '🚧 You should save your comment first! \nAre you sure you want to close that window now?';
 
@@ -91,13 +93,16 @@ function initEditor(token, commentId, SimpleMDE) {
   $('.js-save-edit').click(function() {
     //console.log('saving...');
     toggleSavingState(true);
-    $.post('/save', { token: token, commentId: commentId, value: getValue() })
-    .always(function(res){
+    $.ajax({
+      type: 'PUT',
+      url: `${trelloApi}/actions/${commentId}/text`,
+      data: { key, token, id: commentId, value: getValue() }
+    }).always(function(res){
       //console.log('=>', arguments);
       toggleSavingState(false);
-      toggleChangedState(!res.ok);
-      toggleFailureState(!res.ok);
-      if (res.ok) {
+      toggleChangedState(!res);
+      toggleFailureState(!res);
+      if (res) {
         refreshLastSavedTime();
       }
     });
