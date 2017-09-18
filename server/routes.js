@@ -1,23 +1,3 @@
-const rp = require('request-promise');
-Promise = require('bluebird');
-
-const trelloApi = 'https://api.trello.com/1';
-
-// helper to call Trello API to get comments of a card
-// params = { cardId, token }
-const getCardComments = Promise.coroutine(function* (params){
-  const apiReq = {
-    uri: `${trelloApi}/cards/${params.cardId}/actions`,
-    qs: Object.assign({ key: process.env.APP_KEY, filter: 'commentCard' }, params),
-    json: true
-  };
-  try {
-    return yield rp.get(apiReq);
-  } catch (apiErr) {
-    console.error(`Error fetching comments from Trello API. cardId=${params.cardId} error=${apiErr.message}`);
-    return false;
-  }
-});
 
 // helper to call Trello API to save a card's comment
 // params = { commentId, token, value }
@@ -71,13 +51,6 @@ const routes = (app) => {
     // TODO: don't keep token and IDs visible in URL,
     // e.g. by opening popup using POST, cf https://stackoverflow.com/a/3951843/592254
   })),
-
-  // GET /comments
-  app.get('/comments', Promise.coroutine(function* (req, res) {
-    console.log('GET /comments', req.query);
-    const comments = yield getCardComments(req.query); // { cardId, token }
-    return res.send({ comments: comments });
-  }))
 
 };
 
