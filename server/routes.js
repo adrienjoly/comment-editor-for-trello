@@ -38,20 +38,6 @@ const routes = (app) => {
     token: 'dummy_token',
   })),
 
-  // GET /edit
-  app.get('/edit/:cardId/:commentId/:token/:date', Promise.coroutine(function* (req, res) {
-    console.log('GET', req.path, req.params);
-    const params = Object.assign({}, req.params, {
-      since: new Date(new Date(req.params.date).getTime() - 1).toISOString(),
-      before: new Date(new Date(req.params.date).getTime() + 1).toISOString(),
-    });
-    const comments = yield getCardComments(params); // { cardId, token, commentId }
-    const comment = comments.filter(comment => comment.id == req.params.commentId)[0];
-    res.render('comment-editor.html', { comment, token: req.params.token });
-    // TODO: don't keep token and IDs visible in URL,
-    // e.g. by opening popup using POST, cf https://stackoverflow.com/a/3951843/592254
-  })),
-
 };
 
 module.exports = routes;
