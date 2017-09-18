@@ -27,7 +27,3 @@ Still not getting it? 🤔
 
 - If you want to know more about my Trello-based productivity workflow, read "[Work on 12 projects without burning out 🔥 – Be Yourself](https://byrslf.co/work-on-12-projects-without-burning-out-f5bec50dafdb)".
 - If you want to know how I use this power-up, read "[📓 Using Trello as a living notebook](https://medium.com/@adrienjoly/using-trello-as-a-living-notebook-79cb22aab81f)" and/or watch "[Taking notes in Trello without distractions](https://www.youtube.com/watch?v=sSaHiCkmxNY)".
-
-### Development and production flow
-
-Everytime a commit is pushed to the `master` branch, it's also pushed to the glitch server, thanks to [glitch-github-sync](https://glitch.com/edit/#!/glitch-github-sync). Check glitch's logs for status and errors.

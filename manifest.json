@@ -11,7 +11,7 @@
   ],
   "connectors": {
     "iframe": {
-      "url": "./index.html"
+      "url": "./trello-iframe.html"
     }
   }
 }
