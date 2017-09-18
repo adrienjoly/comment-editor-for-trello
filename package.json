@@ -9,11 +9,6 @@
     "watch": "PORT=8080 onchange '**/*.js' '**/*.html' -i -- npm start",
     "start": "PORT=8080 node server/server.js"
   },
-  "dependencies": {
-    "bluebird": "^3.4.7",
-    "jquery": "^1.12.4",
-    "simplemde": "^1.11.2"
-  },
   "engines": {
     "node": "8.1.x"
   },
@@ -27,18 +22,12 @@
     "productivity",
     "add-on",
     "editor",
-    "glitch.com",
     "outliner"
   ],
   "devDependencies": {
-    "body-parser": "^1.15.2",
     "compression": "1.6.2",
     "cors": "^2.8.1",
     "express": "4.14.0",
-    "local-ssl-proxy": "^1.3.0",
-    "mustache-express": "^1.2.5",
-    "onchange": "^3.2.1",
-    "request": "^2.79.0",
-    "request-promise": "^4.1.1"
+    "local-ssl-proxy": "^1.3.0"
   }
 }

@@ -8,9 +8,7 @@ A Trello Power-Up that allows you to edit card comments using an Outliner.
 
 ▶ Try it now, and get support: [Comment Editor by AJ — Public board](https://trello.com/b/EWaOw7Ks/comment-editor-by-aj-public-board)
 
-▶ Source code: [Glitch](https://glitch.com/edit/#!/trello-outliner-github) (*feel free to remix it!*)
-
-🏆 This Power-up was [submitted to Atlassian's Codegeist](https://devpost.com/software/trello-outliner-lpv3zt). Go give it some love if you enjoy using it!
+🏆 This Power-up was [submitted to Atlassian's Codegeist 2017](https://devpost.com/software/trello-outliner-lpv3zt). Go give it some love if you enjoy using it!
 
 ### For whom was it designed for, and why?
 
