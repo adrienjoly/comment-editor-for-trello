@@ -29,6 +29,9 @@
             url: './comment-selector.html',
             height: 75
           });
+        }, function(err) {
+          console.log('comment editor auth error:', err);
+          alert('Oops, there was an error while authenticating. Can you refresh and try again?');
         });
       });
     </script>
