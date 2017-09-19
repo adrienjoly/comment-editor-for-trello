@@ -10,8 +10,8 @@
       var Promise = TrelloPowerUp.Promise;
       var t = TrelloPowerUp.iframe();
       
-      var trelloAuthUrl = 'https://trello.com/1/authorize?expiration=never&name=Comment%20Editor%20by%20AJ&scope=read,write&key=0b15414357140fe88faecea94f0a22b1&callback_method=fragment&return_url=' + encodeURIComponent(window.location.href.replace('auth.html', 'auth-success.html'));
-      
+      var trelloAuthUrl = 'https://trello.com/1/authorize?expiration=never&name=Comment%20Editor%20by%20AJ&scope=read,write&key=0b15414357140fe88faecea94f0a22b1&callback_method=fragment&return_url=https%3A%2F%2F' + window.location.host + encodeURIComponent(window.location.pathname.replace('auth.html', 'auth-success.html'));
+
       var tokenLooksValid = function(token) {
         return /^[0-9a-f]{64}$/.test(token);
       }
