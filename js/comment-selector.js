@@ -48,7 +48,7 @@ t.get('member', 'private', 'token')
         li.appendChild(document.createTextNode(comment.data.text));
         li.addEventListener('click', function(){
           // open comment outliner (editor) in new tab
-          const url = `/comment-editor.html?${card.id}/${comment.id}/${token}/${comment.date}`;
+          const url = `comment-editor.html?${card.id}/${comment.id}/${token}/${comment.date}`;
           //window.open(url);
           t.overlay({
             url: url,
