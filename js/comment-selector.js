@@ -49,9 +49,14 @@ t.get('member', 'private', 'token')
         li.addEventListener('click', function(){
           // open comment outliner (editor) in new tab
           const url = `comment-editor.html?${card.id}/${comment.id}/${token}/${comment.date}`;
-          //window.open(url);
-          t.overlay({
+          t.modal({ // https://developers.trello.com/reference/#t-modal
             url: url,
+            title: 'Editing comment!',
+            fullscreen: true,
+            actions: [],
+            callback: function() {
+              return confirm('close?')
+            },
             args: {}
           });
           t.closePopup();
