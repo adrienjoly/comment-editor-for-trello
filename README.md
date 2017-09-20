@@ -1,14 +1,14 @@
-# ![](https://github.com/adrienjoly/trello-outliner/raw/master/docs/icon-32px.png) Comment Editor by AJ
+# ![](https://github.com/adrienjoly/comment-editor-for-trello/raw/master/docs/icon-32px.png) Comment Editor by AJ
 
 *Previously announced as "Trello Outliner".*
 
 A Trello Power-Up that allows you to edit card comments using an Outliner.
 
-![comment editor aj trello outliner demo animation](https://github.com/adrienjoly/trello-outliner/raw/master/docs/markdown-editing.gif)
+![comment editor aj trello outliner demo animation](https://github.com/adrienjoly/comment-editor-for-trello/raw/master/docs/markdown-editing.gif)
 
 ▶ Try it now, and get support: [Comment Editor by AJ — Public board](https://trello.com/b/EWaOw7Ks/comment-editor-by-aj-public-board)
 
-🏆 This Power-up was [submitted to Atlassian's Codegeist 2017](https://devpost.com/software/trello-outliner-lpv3zt). Go give it some love if you enjoy using it!
+🏆 This Power-up was [submitted to Atlassian's Codegeist 2017](https://devpost.com/software/comment-editor-for-trello-lpv3zt). Go give it some love if you enjoy using it!
 
 ### For whom was it designed for, and why?
 

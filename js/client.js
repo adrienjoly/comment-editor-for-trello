@@ -9,7 +9,7 @@ TrelloPowerUp.initialize({
     return t.get('member', 'private', 'token')
     .then(function(token){
       return [{
-        icon: 'https://github.com/adrienjoly/trello-outliner/raw/master/icon-transparent.png',
+        icon: 'https://github.com/adrienjoly/comment-editor-for-trello/raw/master/icon-transparent.png',
         text: 'Edit Comment',
         callback: function(context) {
           if (!token) {

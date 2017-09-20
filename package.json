@@ -1,8 +1,8 @@
 {
-  "name": "trello-outliner-power-up",
+  "name": "comment-editor-for-trello-power-up",
   "version": "1.0.0",
   "description": "Comment Editor by AJ: a Trello Power-Up that allows you to edit card comments using an Outliner.",
-  "homepage": "https://adrienjoly.com/trello-outliner",
+  "homepage": "https://adrienjoly.com/comment-editor-for-trello",
   "main": "server/server.js",
   "scripts": {
     "ssl": "node_modules/.bin/local-ssl-proxy --source 9000 --target 8080",
@@ -13,7 +13,7 @@
     "node": "8.1.x"
   },
   "repository": {
-    "url": "https://github.com/adrienjoly/trello-outliner"
+    "url": "https://github.com/adrienjoly/comment-editor-for-trello"
   },
   "author": "Adrien Joly",
   "license": "MIT",
