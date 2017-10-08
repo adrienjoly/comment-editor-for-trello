@@ -11,7 +11,7 @@ A Trello Power-Up that allows you to edit card comments using an Outliner.
   <a href="https://trello.com/c/Omfji2Y4/5-%F0%9F%8E%B2-how-to-enable-comment-editor-by-aj-on-my-own-board"><img src="docs/btn-install-it.png" alt="Install it" /></a>
 </p>
 
-### For whom was it designed for, and why?
+---
 
 **Comment Editor by AJ** is designed for Trello users who also do a lot of structured note-taking.
 
