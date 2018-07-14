@@ -7,8 +7,11 @@ A Trello Power-Up that allows you to edit card comments using an Outliner.
 ![comment editor aj trello outliner demo animation](https://github.com/adrienjoly/comment-editor-for-trello/raw/master/docs/markdown-editing.gif)
 
 <p align="center">
+  <!--
   <a href="https://trello.com/c/ZfjGNprN/2-try-the-power-up-before-installing"><img src="docs/btn-try-it.png" alt="Try it" /></a>
   <a href="https://trello.com/c/Omfji2Y4/5-%F0%9F%8E%B2-how-to-enable-comment-editor-by-aj-on-my-own-board"><img src="docs/btn-install-it.png" alt="Install it" /></a>
+  -->
+  <a href="https://trello.com/power-ups/5982d4cc19d3e5f7c657c71b/enable"><img alt="Add to Trello" height="40" width="144" src="https://p.trellocdn.com/add_to_trello.png" srcset="https://p.trellocdn.com/add_to_trello.png 1x, https://p.trellocdn.com/add_to_trello@2x.png 2x" /></a>
 </p>
 
 ---
