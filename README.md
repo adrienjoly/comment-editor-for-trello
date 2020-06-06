@@ -14,6 +14,8 @@ A Trello Power-Up that allows you to edit card comments using an Outliner.
   <a href="https://trello.com/power-ups/5982d4cc19d3e5f7c657c71b/enable"><img alt="Add to Trello" height="40" width="144" src="https://p.trellocdn.com/add_to_trello.png" srcset="https://p.trellocdn.com/add_to_trello.png 1x, https://p.trellocdn.com/add_to_trello@2x.png 2x" /></a>
 </p>
 
+Demo video: [Advanced Comments for Trello - YouTube](https://www.youtube.com/watch?v=uUR7N5gGW9M) (install + usage)
+
 ---
 
 **Advanced Comments by AJ** is designed for Trello users who also do a lot of structured note-taking.
