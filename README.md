@@ -1,5 +1,7 @@
 # ![](https://github.com/adrienjoly/comment-editor-for-trello/raw/master/docs/icon-32px.png) Advanced Comments by AJ
 
+> `THIS POWER-UP IS NOT MAINTAINED ANYMORE - FEEL FREE TO FORK`
+
 *Previously refered to as "Trello Outliner" and "Comment Editor by AJ".*
 
 A Trello Power-Up that allows you to edit card comments using an Outliner.
